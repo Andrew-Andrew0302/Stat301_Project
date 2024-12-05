@@ -1,6 +1,7 @@
 # Stat301_Project
 
 **Introduction**
+
 Income disparity between genders has long been a subject of social and economic research, with debates centered on the persistence of these differences and the factors that influence them.  Research by Schneider highlights that women earn less on average than men, even when controlling for working hours, leadership roles, and education, but adjusting for variables like working hours reduces the income gap, emphasizing the significant role of working patterns in shaping earnings(Schneider, 2022).  Graf complements this by noting that men are more likely to work full-time and hold leadership positions, both associated with higher pay(Graf , 2024).  Additionally, parenthood plays a critical role, with mothers often working fewer hours than fathers, further influencing earnings disparities.
 
 For our group project, we utilized a dataset named "Adult " available at (https://archive.ics.uci.edu/dataset/2/adult).This dataset includes multiple variables that could potentially influence income, which is the target variable.         Here’s a summary of the variables:
