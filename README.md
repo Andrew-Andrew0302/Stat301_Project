@@ -40,13 +40,30 @@ The central question we aim to investigate Is there a significant income dispari
 
 **Discussion**
 
-This project looked at whether there are income differences between men and women and how factors like job type and hours worked per week play a role. Using a logistic regression model, we found that factors such as education level, marital status, job type, relationship status, capital gains, and capital losses were the most important predictors of income (>50K). Surprisingly, gender itself wasn’t one of the key factors in the final model.
+This project explored whether there are income differences between men and women and how factors like job type and hours worked per week contribute to these disparities. We used a logistic regression model to predict whether an individual's income exceeds $50K annually, leveraging backward selection to identify the most significant predictors. Our analysis revealed that factors such as education level, marital status, job type, relationship status, capital gains, and capital losses were the most influential in predicting income. Interestingly, gender itself was not a significant predictor in the final model once these other variables were accounted for.
 
-Our initial analysis showed that men are more likely to earn over $50K than women. However, when other factors like education and job type were considered, gender’s influence on income became less important. This suggests that income differences might be more about structural issues, like the kinds of jobs or education levels people have, rather than gender alone.
+**Why Logistic Regression?**
+Logistic regression was chosen because it is a well-suited method for binary classification problems, like predicting whether income exceeds $50K. Its interpretability is a significant strength, as it allows us to assess the direct impact of predictors on the probability of earning above the threshold. For example, the model provides odds ratios, which can help us understand how a unit increase in variables like education level or hours worked influences the likelihood of earning more.
 
-The model had an accuracy of 83.32%, meaning it performed well in predicting income. However, some issues, like imbalanced data (more people earning less than $50K) and extreme values in capital gains and losses, might have affected the results. Improving the model by adding interactions between variables or trying other methods like random forests could make it better.
+Another reason for using logistic regression is its ability to handle both categorical and numerical predictors effectively. The dataset contains a mix of variable types (e.g., categorical variables like gender and education, and numerical variables like age and hours worked), which logistic regression can incorporate seamlessly without requiring extensive preprocessing.
 
-Future studies could explore why certain jobs or education levels have such a big impact on income. Adding more data about workplace policies or cultural factors could also help us understand income differences better. These findings are a step toward identifying ways to reduce income inequalities.
+**Model Performance and Limitations**
+While the model performed well, achieving an accuracy of 83.32%, there are some limitations that could affect the validity of our conclusions:
+
+Imbalanced Data: The dataset contained more individuals earning less than $50K than those earning above it. This imbalance may have caused the model to favor the majority class, potentially skewing predictions. Techniques like oversampling the minority class or using a weighted loss function could help address this issue in future analyses.
+
+Outliers in Capital Gains and Losses: Extreme values in capital gains and losses may have disproportionately influenced the model's predictions. These outliers were not removed or transformed in the analysis, which could distort the estimated relationships between predictors and the outcome. Future work should consider removing or handling outliers using robust techniques.
+
+Variable Selection: Backward selection was used to refine the model, but it might not always lead to the most optimal set of predictors. Other selection methods, such as forward selection or stepwise regression, or even regularization techniques like Lasso regression, could be explored to ensure that the final model is both parsimonious and effective.
+
+Interactions Between Variables: The logistic regression model did not account for possible interactions between variables, such as the combined effect of education level and job type on income. Including interaction terms could uncover more nuanced relationships and improve the model's explanatory power.
+
+**Future Directions**
+Future studies could address some of these limitations to build on our findings. For instance, testing more complex models like random forests or gradient boosting machines could capture non-linear relationships and interactions between variables, potentially improving predictive performance. Additionally, incorporating data on workplace policies, cultural norms, or access to childcare could provide a broader context for understanding income disparities.
+
+**Conclusion**
+Although gender was not a significant predictor in the final model, our findings highlight the structural factors, such as education level and job type, that contribute to income differences. These results suggest that addressing income inequality may require targeted interventions to reduce barriers to education and increase access to higher-paying job opportunities for underrepresented groups. By refining our analysis and incorporating additional data in future research, we can work toward a more comprehensive understanding of income disparities and how to mitigate them effectively.
+
 
 **Reference**
 
